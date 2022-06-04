@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int normalMethod(int number ){
+int normalMethod(long long number ){
     int nosOfBits = log2(number)+1;
     int oneBits = 0;
     for(int i = 0; i <= nosOfBits; i++){
@@ -20,7 +20,7 @@ int normalMethod(int number ){
    return oneBits%2;
 }
 
-int bitMaskMethod(int number){
+int bitMaskMethod(long long number){
     int nosOfBits = log2(number)+1;
     int parity = 0;
 
@@ -32,8 +32,8 @@ int bitMaskMethod(int number){
     return parity;
 }
 
-int rightShiftMethod(int number){
-    int parity = 0;
+int rightShiftMethod(long long number){
+    long long parity = 0;
     while(number){
         parity ^= (number & 1);
         number >>= 1;
@@ -41,8 +41,8 @@ int rightShiftMethod(int number){
     return parity;
 }
 
-int lowestBitMethod(int number){
-    int parity = 0;
+int lowestBitMethod(long long number){
+    long long parity = 0;
     while(number){
         parity ^= 1;
         number &= (number - 1);

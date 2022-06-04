@@ -1,29 +1,30 @@
 #include<iostream>
+#include<chrono>
 #include<brute-force-bit-method.h>
 
 using namespace std;
+using namespace std::chrono;
+
+void calculateTimeForFunction(long long number, string functionName, int (*func)(long long)){
+    auto startTime = high_resolution_clock::now();
+    if(func(number) == 0){
+        cout<<"Test Passed for "<<functionName<<"\n";
+    } else{
+        cout<<"Test Passed for "<<functionName<<"\n";
+    }
+    auto endTime = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(endTime - startTime);
+    cout<<"Time elapsed for function "<<functionName<<" "<<duration.count()<<" microseconds\n";
+}
 
 int main(){
-    if(normalMethod(15) == 0 && normalMethod(8) == 1){
-        cout<<"Test Passed for normalMethod\n";
-    } else{
-        cout<<"Test Failed for normalMethod\n";
-    }
-    if(bitMaskMethod(15) == 0 && bitMaskMethod(8) == 1){
-        cout<<"Test Passed for bit Mask Method\n";
-    } else{
-        cout<<"Test Failed for bit mask method\n";
-    }
+    long long number = 1099511627775; //60 bit number
 
-    if(rightShiftMethod(15) == 0 && rightShiftMethod(8) == 1){
-        cout<<"Test Passed for rightShiftMethod\n";
-    } else{
-        cout<<"Test Failed for rightShiftMethod\n";
-    }
+    calculateTimeForFunction(number, "normalFunction", &normalMethod);
+    calculateTimeForFunction(number, "bitMaskMethod", &bitMaskMethod);
+    calculateTimeForFunction(number, "rightShiftMethod", &rightShiftMethod);
+    calculateTimeForFunction(number, "lowestBitMethod", &lowestBitMethod);
 
-    if(lowestBitMethod(15) == 0 && lowestBitMethod(8) == 1){
-        cout<<"Test Passed for lowestBitMethod\n";
-    } else{
-        cout<<"Test Failed for lowestBitMethod\n";
-    }
+
+
 }
