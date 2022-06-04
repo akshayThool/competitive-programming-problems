@@ -1,6 +1,6 @@
 #include<iostream>
 #include<chrono>
-#include<brute-force-bit-method.h>
+#include<brute-force.h>
 
 using namespace std;
 using namespace std::chrono;
@@ -18,7 +18,7 @@ void calculateTimeForFunction(long long number, string functionName, int (*func)
 }
 
 int main(){
-    long long number = 1099511627775; //60 bit number
+    long long number = 595056260442243600; //60 bit number
 
     calculateTimeForFunction(number, "normalFunction", &normalMethod);
     calculateTimeForFunction(number, "bitMaskMethod", &bitMaskMethod);

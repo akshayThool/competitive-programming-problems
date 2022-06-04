@@ -1,6 +1,6 @@
 #include<iostream>
 #include<cmath>
-#include<brute-force-bit-method.h>
+#include<brute-force.h>
 
 using namespace std;
 
@@ -8,7 +8,7 @@ int normalMethod(long long number ){
     int nosOfBits = log2(number)+1;
     int oneBits = 0;
     for(int i = 0; i <= nosOfBits; i++){
-        int powerValue = pow(2, nosOfBits - i);
+        long long powerValue = pow(2, nosOfBits - i);
         if(powerValue <= number){
             number -= powerValue;
             oneBits++;
