@@ -4,6 +4,11 @@
 using namespace std;
 
 int main(){
+    if(normalMethod(15) == 0 && normalMethod(8) == 1){
+        cout<<"Test Passed for normalMethod\n";
+    } else{
+        cout<<"Test Failed for normalMethod\n";
+    }
     if(bitMaskMethod(15) == 0 && bitMaskMethod(8) == 1){
         cout<<"Test Passed for bit Mask Method\n";
     } else{
