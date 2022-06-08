@@ -3,6 +3,8 @@
 
 using namespace std;
 
+void calculateTimeTaken(unsigned long long number);
+
 int main(){
-    cout<<reverseBitsBruteForce(17293822569102704640)<<"\n";
+    cout<<reverseBitsCacheMethod(18374686479671623680ULL)<<"\n";
 }
