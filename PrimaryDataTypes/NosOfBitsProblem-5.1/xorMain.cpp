@@ -9,7 +9,7 @@ int parityCheckByXOR(unsigned long long number){
     int nosOfBits = 32;
     do{
         number ^= (number >> nosOfBits);
-         nosOfBits >>= 1;
+        nosOfBits >>= 1;
     }while(nosOfBits);
     return number & 1;
 }
