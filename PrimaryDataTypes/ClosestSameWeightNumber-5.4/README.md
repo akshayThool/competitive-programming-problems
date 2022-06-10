@@ -10,7 +10,7 @@ Define Weight of a non-negative integer as number of high bits in binary format 
 
 ## Brute Force Method
 1. Calculate the nosOfBits required for the number
-2. Using the nosOfBits, calculate the maxDifference variable, which is 2<sub>nosOfBits</sub>
+2. Using the nosOfBits, calculate the maxDifference variable, which is 2<sup>nosOfBits</sup>
 3. Perform For loop from i = 1 to maxDifference
 4. In every loop, check whether the weight of the number is equal to the weight of (number + i) or (number + i). If it is equal return the value i.e either (number + i) or (number - i)
 ## Optimized Method
