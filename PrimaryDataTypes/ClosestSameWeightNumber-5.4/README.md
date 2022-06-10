@@ -1,6 +1,6 @@
 # Closest Same Weight Number
 ## Problem Statement
-Define Weight of a non-negative integer as number of high bits in binary format i.e weight of 92 in base-2 (1011100)<sup>2</sup> is 4.
+Define Weight of a non-negative integer as number of high bits in binary format i.e weight of 92 in base-2 (1011100)<sub>2</sub> is 4.
 
 ## Get Weight Method
 1. Declare a weight count variable
