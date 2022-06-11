@@ -4,5 +4,5 @@
 using namespace std;
 
 int main(){
-    cout<<getClosestSameWeightNumberON(15)<<"\n";
+    cout<<getClosestSameWeightNumberOlN(3)<<"\n";
 }
