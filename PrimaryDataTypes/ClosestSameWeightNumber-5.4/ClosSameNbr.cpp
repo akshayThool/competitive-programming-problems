@@ -28,3 +28,13 @@ unsigned long long getClosestSameWeightNumberBF(unsigned long long number){
     }
     return 0ULL;
 }
+
+unsigned long long getClosestSameWeightNumberON(unsigned long long number){
+    int nosOfBits = 63;
+    for(int i = 0; i <= nosOfBits; i++){
+       if(((number >> i) & 1ULL) != ((number >>(i+1)) & 1ULL)){
+           return number ^ (1ULL << i) ^ (1ULL << (i+1));
+       }
+    }
+    return 0ULL;
+}

@@ -13,6 +13,9 @@ Define Weight of a non-negative integer as number of high bits in binary format 
 2. Using the nosOfBits, calculate the maxDifference variable, which is 2<sup>nosOfBits</sup>
 3. Perform For loop from i = 1 to maxDifference
 4. In every loop, check whether the weight of the number is equal to the weight of (number + i) or (number + i). If it is equal return the value i.e either (number + i) or (number - i)
-## Optimized Method
-
+## Optimized Method - O(n)
+1. Initialize the variable nosOfBits with the number of bits of the number
+2. Run the for loop from i = 0 to nosOfBits.
+3. In every step of for loop, check whether the bit at position at i and i+1 is same or different
+4. If it is different, then swap the bit at i and i+1 position and return the number
 ## O(1) Method
