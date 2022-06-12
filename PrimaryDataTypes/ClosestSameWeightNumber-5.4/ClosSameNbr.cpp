@@ -44,6 +44,34 @@ int getTrailingZeros(unsigned long long number){
     }
 }
 
+int getTrailingOnes(unsigned long long number){
+    int count = 0;
+    if(number & 0x1){
+        if((number & 0xffffffff) == 0xffffffff){
+            count += 32;
+            number >>=32;
+        }
+        if((number & 0xffff) == 0xffff){
+            count += 16;
+            number >>= 16;
+        }
+        if((number & 0xff) == 0xff){
+            count += 8;
+            number >>= 8;
+        }
+        if((number & 0xf) == 0xf){
+            count +=4;
+            number >>= 4;
+        }
+        if((number & 0x3) == 0x3){
+            count += 2;
+            number >>= 2;
+        }
+        count -= number & 0x1;
+    }
+    return count;
+}
+
 unsigned long long getClosestSameWeightNumberBF(unsigned long long number){
     int nosOfBits = log2(number);
     int numberWeight = getWeight(number);
@@ -70,9 +98,18 @@ unsigned long long getClosestSameWeightNumberON(unsigned long long number){
     return 0ULL;
 }
 
-unsigned long long getClosestSameWeightNumberOlN(unsigned long long number){
+unsigned long long getLexicallyEqualNumber(unsigned long long number){
     unsigned long long vNumber = number | (number - 1);
     unsigned long long closestNumber = (vNumber + 1) | (((~vNumber & -~vNumber) - 1) >> (getTrailingZeros(number)+1));
     return closestNumber;
+}
 
+unsigned long long getClosestSameWeightNumberOlN(unsigned long long number){
+    unsigned int c = getTrailingZeros(number);
+    if(c){
+        return number ^ (number & -number) ^ (1ULL << (c - 1));
+    } else {
+        c = getTrailingOnes(number);
+        return number ^ (1ULL << c) ^ (1ULL << (c - 1));
+    }
 }
