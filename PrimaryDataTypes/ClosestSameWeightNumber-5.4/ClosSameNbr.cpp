@@ -67,7 +67,7 @@ int getTrailingOnes(unsigned long long number){
             count += 2;
             number >>= 2;
         }
-        count -= number & 0x1;
+        count += number & 0x1;
     }
     return count;
 }
