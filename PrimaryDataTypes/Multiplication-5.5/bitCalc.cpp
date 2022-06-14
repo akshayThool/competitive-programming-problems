@@ -3,6 +3,16 @@
 
 using namespace std;
 
+unsigned addRecursion(unsigned a, unsigned b){
+    unsigned carry = (a & b) << 1;
+
+    unsigned sum = a ^ b;
+
+    if(carry == 0)
+        return sum;
+    return addRecursion(carry, sum);
+}
+
 unsigned addBook(unsigned a, unsigned b){
     unsigned carryIn = 0;
     unsigned temp_a = a, temp_b = b, sum = 0;
