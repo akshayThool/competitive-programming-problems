@@ -4,6 +4,5 @@
 using namespace std;
 
 int main(){
-    cout<<addRecursion(15, 14)<<"\n";
-    cout<<subtractOne(12)<<"\n";
+    cout<<multiplyBF(4, 5)<<"\n";
 }

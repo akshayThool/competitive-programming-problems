@@ -33,4 +33,11 @@ unsigned addBook(unsigned a, unsigned b){
     }
     return sum | carryIn;
 }
-unsigned multiplyBF(unsigned a, unsigned b);
+unsigned multiplyBF(unsigned a, unsigned b){
+    unsigned sum = 0;
+    while(a){
+        sum = addRecursion(sum, b);
+        a = subtractOne(a);
+    }
+    return sum;
+}
