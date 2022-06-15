@@ -4,5 +4,6 @@
 using namespace std;
 
 int main(){
-    cout<<addRecursion(5, 4)<<"\n";
+    cout<<addRecursion(15, 14)<<"\n";
+    cout<<subtractOne(12)<<"\n";
 }

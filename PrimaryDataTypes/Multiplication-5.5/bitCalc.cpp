@@ -13,6 +13,10 @@ unsigned addRecursion(unsigned a, unsigned b){
     return addRecursion(carry, sum);
 }
 
+unsigned subtractOne(unsigned a){
+    return addRecursion((a << 1), ~a);
+}
+
 unsigned addBook(unsigned a, unsigned b){
     unsigned carryIn = 0;
     unsigned temp_a = a, temp_b = b, sum = 0;
