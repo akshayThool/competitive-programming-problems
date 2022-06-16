@@ -89,3 +89,12 @@ Steps
 3. For every loop, add the `second number` to the `sum` variable and decrement the `first number`
 
 e.g Multiply 5 x 4 means, `first number` being 5, add 4 to `sum` variable for 5 times i.e `sum = 4 + 4 + 4 + 4 + 4`
+
+### Multiply using shift operators.
+
+Steps
+1. Initialize two variables one is `result` which stores the sum value, and other is `i` which is used for left shift operator on the second operand.
+2. Perform `while` loop with the condition that first operand is not zero.
+3. In every while loop, check for the least significant bit of the first operand using `a & 0x1`. If the bit is set, then add `(secondNumber << i)` to the `result` variable.
+4. Finally, right shift the first operand by 1 and increment the `i` variable by 1.
+5. Return the `result` value.
