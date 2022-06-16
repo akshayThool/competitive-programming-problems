@@ -41,3 +41,15 @@ unsigned multiplyBF(unsigned a, unsigned b){
     }
     return sum;
 }
+
+unsigned multiplyShift(unsigned a, unsigned b){
+    unsigned sum = 0, i = 0;
+    while(a){
+        if(a & 0x1){
+            sum = addRecursion(sum, b << i);
+        }
+        a >>= 1;
+        i = addRecursion(i, 1);
+    }
+    return sum;
+}

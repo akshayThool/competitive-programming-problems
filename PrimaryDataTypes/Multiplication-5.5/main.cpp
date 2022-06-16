@@ -4,5 +4,5 @@
 using namespace std;
 
 int main(){
-    cout<<multiplyBF(4, 5)<<"\n";
+    cout<<multiplyShift(4, 5)<<"\n";
 }
