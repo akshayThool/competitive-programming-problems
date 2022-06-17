@@ -4,5 +4,5 @@
 using namespace std;
 
 int main(){
-    cout<<divisionBF(20, 4)<<"\n";
+    cout<<division2k(20, 4)<<"\n";
 }
