@@ -4,5 +4,7 @@
 using namespace std;
 
 int main(){
-    cout<<division2k(20, 4)<<"\n";
+     cout<<divisionBF(4294967295, 1)<<"\n";
+    cout<<division2k(4294967295, 1)<<"\n";
+    cout<<divisionLargestFirst(4294967295, 1)<<"\n";
 }
