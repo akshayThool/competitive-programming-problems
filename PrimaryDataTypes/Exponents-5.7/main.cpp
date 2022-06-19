@@ -3,5 +3,6 @@
 using namespace std;
 
 int main(){
-    cout<<exponentBF(45, 3)<<"\n";
+    cout<<exponentBF(3, 24)<<"\n";
+    cout<<exponentON(3, 24)<<"\n";
 }

@@ -5,5 +5,6 @@
 using namespace std;
 
 double exponentBF(double number, unsigned exponent);
+double exponentON(double number, unsigned exponent);
 
 #endif // BITCALC_H
