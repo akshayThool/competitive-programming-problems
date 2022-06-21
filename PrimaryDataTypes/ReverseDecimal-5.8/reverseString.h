@@ -6,5 +6,7 @@
 using namespace std;
 
 string reverseString(string inputString);
+void reverseStringLoop(string& inputString);
+void reverseStringWhile(string& inputString);
 
 #endif // REVERSESTRING_H
