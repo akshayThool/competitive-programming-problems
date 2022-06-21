@@ -1,6 +1,6 @@
-#include "reverseString.h"
+#include "reverseDecimal.h"
 
 
 int main(){
-    cout<<reverseString("HiThere!!!")<<"\n";
+    cout<<reverseDecimalON(-123)<<"\n";
 }
