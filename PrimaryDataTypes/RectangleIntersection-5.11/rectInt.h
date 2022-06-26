@@ -1,6 +1,7 @@
 #ifndef RECTINT_H
 #define RECTINT_H
 #include<iostream>
+#include<algorithm>
 
 using namespace std;
 
