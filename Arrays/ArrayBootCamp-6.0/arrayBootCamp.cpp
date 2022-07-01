@@ -95,3 +95,17 @@ void displayArray(vector<int>* A_ptr){
     }
     cout<<"\n";
 }
+
+void testVectorForEvenOdd(vector<int>* A_ptr){
+    int i = 0;
+    while((*A_ptr)[i]%2 == 0){
+        i++;
+    }
+    for(int j = i; j < (*A_ptr).size(); j++){
+        if((*A_ptr)[j]%2 == 0){
+            cout<<"Test Case Failed\n";
+            return;
+        }
+    }
+    cout<<"Array passed the test case\n";
+}
