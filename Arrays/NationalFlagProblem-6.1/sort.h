@@ -12,6 +12,7 @@ void displayVector(vector<int>* A_ptr);
 void dutchNationalFlagProblem(vector<int>* A, unsigned index);
 void dutchNationalFlagProblemSC(vector<int>* A, unsigned index);
 void dutchNationalFlagProblemN2(vector<int>* A, unsigned index);
+void dutchNationalFlagProblemN(vector<int>* A, unsigned index);
 
 
 #endif // SORT_H

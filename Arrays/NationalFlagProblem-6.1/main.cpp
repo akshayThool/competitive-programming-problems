@@ -14,7 +14,7 @@ int main(){
 
     cout<<"The Dutch National Flag Problem\n";
     displayVector(&b);
-    dutchNationalFlagProblemN2(&b, 7);
+    dutchNationalFlagProblemN(&b, 7);
     displayVector(&b);
     //ToDo
 }

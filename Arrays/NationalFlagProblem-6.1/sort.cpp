@@ -147,5 +147,24 @@ void dutchNationalFlagProblemN2(vector<int>* A, unsigned index){
     }
 }
 
+void dutchNationalFlagProblemN(vector<int>* A, unsigned index){
+    int pivot = (*A)[index], vectorSize = (*A).size();
+    int smaller = 0;
+    //First Pass
+    for(int i = 0; i < vectorSize; i++){
+        if((*A)[i] < pivot){
+            swap(A, i, smaller++);
+        }
+    }
+
+    int larger = (*A).size() - 1;
+    //Second Pass
+    for(int i = (vectorSize - 1); i >= 0 && (*A)[i] >= pivot; i--){
+        if((*A)[i] > pivot){
+            swap(A, i, larger--);
+        }
+    }
+}
+
 
 
