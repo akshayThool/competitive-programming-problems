@@ -166,5 +166,25 @@ void dutchNationalFlagProblemN(vector<int>* A, unsigned index){
     }
 }
 
+/**
+ * @brief dutchNationalFlagProblemSP - Single Pass Algorithm
+ * @param A
+ * @param index
+ */
+void dutchNationalFlagProblemSP(vector<int>* A, unsigned index){
+    int pivot = (*A)[index];
+    int smaller = 0, larger = (*A).size(), equal = 0;
+    while(equal < larger){
+        if((*A)[equal] < pivot){
+            swap(A, equal, smaller++);
+            equal++;
+        } else if ((*A)[equal] == pivot){
+            equal++;
+        } else {
+            swap(A, equal, --larger);
+        }
+    }
+}
+
 
 
