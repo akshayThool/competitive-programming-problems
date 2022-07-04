@@ -12,6 +12,12 @@ void swap(vector<int>* A_ptr, int i, int j){
     (*A_ptr)[j] = temp;
 }
 
+void swap(vector<Color>* A_ptr, int i, int j){
+    Color temp = (*A_ptr)[i];
+    (*A_ptr)[i] = (*A_ptr)[j];
+    (*A_ptr)[j] = temp;
+}
+
 /**
  * @brief partition - Partitions the vectors into two subArrays
  * @param A - Vector
@@ -66,6 +72,13 @@ void fillVectorWithRandom(vector<int>* A_ptr, unsigned size, int lowerBound, int
  * @param A_ptr
  */
 void displayVector(vector<int>* A_ptr){
+    for(int i : (*A_ptr)){
+        cout<<i<<" ";
+    }
+    cout<<"\n";
+}
+
+void displayVector(vector<Color>* A_ptr){
     for(int i : (*A_ptr)){
         cout<<i<<" ";
     }
@@ -182,6 +195,25 @@ void dutchNationalFlagProblemSP(vector<int>* A, unsigned index){
             equal++;
         } else {
             swap(A, equal, --larger);
+        }
+    }
+}
+
+/**
+ * @brief dutchNationalFlagProblemVariant1
+ * Problem Statement - Assuming that keys take one of three values, reorder the array so that all objects with the same key appear together. The order of the subarrays is not important.
+ * @param A
+ * @param index
+ */
+void dutchNationalFlagProblemVariant1(vector<Color>* A){
+    int blue = 0, white = 0, red = (*A).size();
+    while(white < red){
+        if((*A)[white] == BLUE){
+            swap(A, white++, blue++);
+        } else if((*A)[white] == WHITE){
+            white++;
+        } else {
+            swap(A, white, --red);
         }
     }
 }

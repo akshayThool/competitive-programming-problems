@@ -10,11 +10,16 @@ int main(){
 //    quickSort(&a, 0, a.size()-1);
 //    displayVector(&a);
 
-    vector<int> b = {2, 8, 7, 4, 3, 4, 6, 4};
+//    vector<int> b = {2, 8, 7, 4, 3, 4, 6, 4};
 
-    cout<<"The Dutch National Flag Problem\n";
+//    cout<<"The Dutch National Flag Problem\n";
+//    displayVector(&b);
+//    dutchNationalFlagProblemSP(&b, 7);
+//    displayVector(&b);
+
+    vector<Color> b = {BLUE, WHITE, RED, WHITE, BLUE, WHITE, RED, BLUE};
     displayVector(&b);
-    dutchNationalFlagProblemSP(&b, 7);
+    dutchNationalFlagProblemVariant1(&b);
     displayVector(&b);
-    //ToDo
+
 }
