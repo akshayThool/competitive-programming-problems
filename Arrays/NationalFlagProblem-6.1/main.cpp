@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     //understanding quick sort
-    vector<int> a = {26, 25, 45, 49, 24, 33, 46, 32, 23, 39};
+//    vector<int> a = {26, 25, 45, 49, 24, 33, 46, 32, 23, 39};
 //    fillVectorWithRandom(&a, 10, 20, 50);
 //    displayVector(&a);
 //    quickSort(&a, 0, a.size()-1);
@@ -17,9 +17,14 @@ int main(){
 //    dutchNationalFlagProblemSP(&b, 7);
 //    displayVector(&b);
 
-    vector<Color> b = {BLUE, WHITE, RED, WHITE, BLUE, WHITE, RED, BLUE};
-    displayVector(&b);
-    dutchNationalFlagProblemVariant1(&b);
-    displayVector(&b);
+//    vector<Color> b = {BLUE, WHITE, RED, WHITE, BLUE, WHITE, RED, BLUE};
+//    displayVector(&b);
+//    dutchNationalFlagProblemVariant1(&b);
+//    displayVector(&b);
+
+        vector<Color> b = {BLUE, BLACK, BLACK, RED, RED, BLACK, RED, BLUE, BLACK, WHITE, RED, BLUE, WHITE, BLUE};
+        displayVector(&b);
+        dutchNationalFlagProblemVariant2(&b);
+        displayVector(&b);
 
 }

@@ -218,5 +218,29 @@ void dutchNationalFlagProblemVariant1(vector<Color>* A){
     }
 }
 
+/**
+ * @brief dutchNationalFlagProblemVariant2 - Assuming that keys take one of four values, reorder the array so that all objects with the same key appear together. The order of the subarrays is not important.
+ * @param A
+ */
+void dutchNationalFlagProblemVariant2(vector<Color>* A){
+    int blue = 0, white = 0, red = (*A).size(), black = (*A).size();
+    while(white < red){ //First Pass divides into three parts
+        if((*A)[white] == BLUE){
+            swap(A, white++, blue++);
+        } else if((*A)[white] == WHITE){
+            white++;
+        } else {
+            swap(A, white, --red);
+        }
+    }
+    while(white < black){ //Second pass divides the fourth pass
+        if((*A)[white] == RED){
+            white++;
+        } else {
+            swap(A, white, --black);
+        }
+    }
+}
+
 
 

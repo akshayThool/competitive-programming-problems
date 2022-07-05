@@ -6,7 +6,7 @@
 
 using namespace std;
 
-typedef enum {BLUE, WHITE, RED} Color;
+typedef enum {BLUE, WHITE, RED, BLACK} Color;
 
 void quickSort(vector<int>* A, int lowerIndex, int upperIndex);
 void fillVectorWithRandom(vector<int>* A_ptr, unsigned size, int lowerBound, int upperBound);
@@ -18,6 +18,7 @@ void dutchNationalFlagProblemN2(vector<int>* A, unsigned index);
 void dutchNationalFlagProblemN(vector<int>* A, unsigned index);
 void dutchNationalFlagProblemSP(vector<int>* A, unsigned index);
 void dutchNationalFlagProblemVariant1(vector<Color>* A);
+void dutchNationalFlagProblemVariant2(vector<Color>* A);
 
 
 #endif // SORT_H
