@@ -18,6 +18,18 @@ void swap(vector<Color>* A_ptr, int i, int j){
     (*A_ptr)[j] = temp;
 }
 
+void swap(vector<bool>* A_ptr, int i, int j){
+    bool temp = (*A_ptr)[i];
+    (*A_ptr)[i] = (*A_ptr)[j];
+    (*A_ptr)[j] = temp;
+}
+
+void swap(vector<CompoundObject>* A_ptr, int i, int j){
+    CompoundObject temp = (*A_ptr)[i];
+    (*A_ptr)[i] = (*A_ptr)[j];
+    (*A_ptr)[j] = temp;
+}
+
 /**
  * @brief partition - Partitions the vectors into two subArrays
  * @param A - Vector
@@ -79,10 +91,25 @@ void displayVector(vector<int>* A_ptr){
 }
 
 void displayVector(vector<Color>* A_ptr){
-    for(int i : (*A_ptr)){
+    for(Color i : (*A_ptr)){
         cout<<i<<" ";
     }
     cout<<"\n";
+}
+
+void displayVector(vector<bool>* A_ptr){
+    for(bool i : (*A_ptr)){
+        cout<<i<<" ";
+    }
+    cout<<"\n";
+}
+
+void displayVector(vector<CompoundObject>* A_ptr){
+    for(CompoundObject i : (*A_ptr)){
+        cout<<"{"<<i.value<<","<<i.isAvailable<<"} ";
+    }
+    cout<<"\n";
+
 }
 
 void dutchNationalFlagProblem(vector<int>* A, unsigned index){
@@ -233,7 +260,7 @@ void dutchNationalFlagProblemVariant2(vector<Color>* A){
             swap(A, white, --red);
         }
     }
-    while(white < black){ //Second pass divides the fourth pass
+    while(white < black){ //Second pass partitions the third part into two in ordered manner
         if((*A)[white] == RED){
             white++;
         } else {
@@ -241,6 +268,34 @@ void dutchNationalFlagProblemVariant2(vector<Color>* A){
         }
     }
 }
+
+/**
+ * @brief dutchNationalFlagProblemVariant3 - Given an Array of n objects with Boolean-valued keys, reorder the array so that object that have the key false appear first.
+ * @param A
+ */
+void dutchNationalFlagProblemVariant3(vector<bool>* A){
+    int falseIndex = 0, trueIndex = 0, vectorSize = (*A).size();
+    while(trueIndex < vectorSize){
+        if((*A)[trueIndex]){
+            trueIndex++;
+        } else {
+            swap(A, trueIndex++, falseIndex++);
+        }
+    }
+}
+
+void dutchNationalFlagProblemVariant3(vector<CompoundObject>* A){
+    int falseIndex = 0, trueIndex = 0, vectorSize = (*A).size();
+    while(trueIndex < vectorSize){
+        if((*A)[trueIndex].isAvailable){
+            trueIndex++;
+        } else {
+            swap(A, trueIndex++, falseIndex++);
+        }
+    }
+}
+
+
 
 
 

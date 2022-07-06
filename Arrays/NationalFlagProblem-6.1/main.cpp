@@ -1,6 +1,13 @@
-#include "sort.h"
+#include "arrayNationalFlag.h"
 
 using namespace std;
+
+//template<size_t SIZE> void displayArray(array<int, SIZE>& A){
+//    for(auto a: A){
+//        cout<<a<<" ";
+//    }
+//    cout<<"\n";
+//}
 
 int main(){
     //understanding quick sort
@@ -22,9 +29,25 @@ int main(){
 //    dutchNationalFlagProblemVariant1(&b);
 //    displayVector(&b);
 
-        vector<Color> b = {BLUE, BLACK, BLACK, RED, RED, BLACK, RED, BLUE, BLACK, WHITE, RED, BLUE, WHITE, BLUE};
-        displayVector(&b);
-        dutchNationalFlagProblemVariant2(&b);
-        displayVector(&b);
+//        vector<Color> b = {BLUE, BLACK, BLACK, RED, RED, BLACK, RED, BLUE, BLACK, WHITE, RED, BLUE, WHITE, BLUE};
+//        displayVector(&b);
+//        dutchNationalFlagProblemVariant2(&b);
+//        displayVector(&b);
 
+//    vector<bool> b = {0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0};
+//    displayVector(&b);
+//    dutchNationalFlagProblemVariant3(&b);
+//    displayVector(&b);
+
+//    vector<CompoundObject> b;
+//    b.push_back(CompoundObject());
+//    b[0].value = 'a';
+//    displayVector(&b);
+//    dutchNationalFlagProblemVariant3(&b);
+//    displayVector(&b);
+
+    array<int, 5> a = {1, 2, 3, 4, 5};
+    displayArray(a);
+    swap(a, 0, 3);
+    displayArray(a);
 }
