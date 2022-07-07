@@ -31,5 +31,6 @@ void dutchNationalFlagProblemVariant1(vector<Color>* A);
 void dutchNationalFlagProblemVariant2(vector<Color>* A);
 void dutchNationalFlagProblemVariant3(vector<bool>* A);
 void dutchNationalFlagProblemVariant3(vector<CompoundObject>* A);
+void dutchNationalFlagProblemVariant4(vector<CompoundObject>* A);
 
 #endif // SORT_H

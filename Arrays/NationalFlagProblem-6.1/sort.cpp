@@ -284,6 +284,7 @@ void dutchNationalFlagProblemVariant3(vector<bool>* A){
     }
 }
 
+
 void dutchNationalFlagProblemVariant3(vector<CompoundObject>* A){
     int falseIndex = 0, trueIndex = 0, vectorSize = (*A).size();
     while(trueIndex < vectorSize){
@@ -291,6 +292,17 @@ void dutchNationalFlagProblemVariant3(vector<CompoundObject>* A){
             trueIndex++;
         } else {
             swap(A, trueIndex++, falseIndex++);
+        }
+    }
+}
+
+void dutchNationalFlagProblemVariant4(vector<CompoundObject>* A){
+    int falseIndex = (*A).size() - 1, trueIndex = (*A).size() - 1, vectorSize = (*A).size();
+    while(0 <= falseIndex){
+        if((*A)[falseIndex].isAvailable){
+            swap(A, trueIndex--, falseIndex--);
+        } else {
+            falseIndex--;
         }
     }
 }
