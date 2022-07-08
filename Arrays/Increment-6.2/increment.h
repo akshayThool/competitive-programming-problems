@@ -4,6 +4,7 @@
 #include<vector>
 #include<array>
 #include<cmath>
+#include<string>
 
 using namespace std;
 
@@ -30,5 +31,6 @@ template<size_t SIZE> void incrementArrayNumberBF(array<int, SIZE>& A){
 
 void incrementVector(vector<int>* A);
 void displayVector(vector<int> A);
+string bitAddition(string bS, string bT);
 
 #endif // INCREMENT_H

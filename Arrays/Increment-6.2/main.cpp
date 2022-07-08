@@ -13,4 +13,9 @@ int main(){
     displayVector(b);
     incrementVector(&b);
     displayVector(b);
+
+    string str1 = "1101";
+    string str2 = "101";
+    string result = bitAddition(str1, str2);
+    cout<<result<<"\n";
 }
