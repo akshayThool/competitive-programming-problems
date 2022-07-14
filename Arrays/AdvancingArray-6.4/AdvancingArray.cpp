@@ -4,6 +4,10 @@ int minimum(int a, int b){
     return a < b ? a : b;
 }
 
+int maximum(int a, int b){
+    return a > b ? a : b;
+}
+
 bool isSolutionPossible(vector<int> A){
 
     if(!A.front()){
@@ -26,4 +30,13 @@ bool isSolutionPossible(vector<int> A){
     }
 
     return false;
+}
+
+bool canReachEnd(vector<int> A){
+    int max_reach = 0;
+    int lastIndex = A.size() - 1;
+    for(int i = 0; i <= max_reach && max_reach < lastIndex; i++){
+        max_reach = maximum(max_reach, A[i]+i);
+    }
+    return max_reach >=lastIndex;
 }
