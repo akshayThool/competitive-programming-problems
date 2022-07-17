@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void removeDuplicates(vector<int>& A);
+void removeDuplicatesOn(vector<int>* A);
 void displayVector(vector<int> A);
 
 #endif // REMOVEDUPES_H
