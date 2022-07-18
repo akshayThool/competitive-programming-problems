@@ -22,6 +22,37 @@ void removeDuplicatesOn(vector<int>* A){
     (*A) = newA;
 }
 
+void swap(vector<int>* A, int a, int b){
+    int temp = (*A)[a];
+    (*A)[a] = (*A)[b];
+    (*A)[b] = temp;
+}
+
+/**
+ * @brief removeDuplicatesO1 - Removing Duplicates from array with O(1) space complexity
+ * @param A
+ */
+void removeDuplicatesO1(vector<int>* A){
+    int previousNumber = (*A)[0];
+    for(int i = 1, j = 1; i < (*A).size();i++){
+        if((*A)[i] == previousNumber){
+            (*A)[i] = 0;
+        } else {
+            previousNumber = (*A)[i];
+        }
+    }
+
+    int nonZeroIndex = 0, zeroIndex = 0;
+
+    while(zeroIndex < (*A).size()){
+        if((*A)[zeroIndex] == 0){
+            zeroIndex++;
+        } else {
+            swap(A, zeroIndex++, nonZeroIndex++);
+        }
+    }
+}
+
 void displayVector(vector<int> A){
     for(int a : A){
         cout<<a<<" ";
