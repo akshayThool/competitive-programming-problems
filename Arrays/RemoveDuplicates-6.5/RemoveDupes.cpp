@@ -53,6 +53,20 @@ void removeDuplicatesO1(vector<int>* A){
     }
 }
 
+void removeDuplicateBook(vector<int>* A){
+    vector<int> &Acopy = *A;
+
+    int writeIndex = 1;
+    for(int i = 1; i < Acopy.size(); i++){
+        if(Acopy[writeIndex - 1] != Acopy[i]){
+            Acopy[writeIndex++] = Acopy[i];
+        }
+    }
+    for(int i = writeIndex; i < Acopy.size(); i++){
+        Acopy[i] = 0;
+    }
+}
+
 void displayVector(vector<int> A){
     for(int a : A){
         cout<<a<<" ";
