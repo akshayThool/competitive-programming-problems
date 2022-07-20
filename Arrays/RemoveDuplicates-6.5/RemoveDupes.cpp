@@ -53,6 +53,19 @@ void removeDuplicatesO1(vector<int>* A){
     }
 }
 
+void removeInteger(vector<int>* A, int toBeRemoved){
+    vector<int> &Acopy = *A;
+    int writeIndex = 0;
+    for(int i = 0; i < Acopy.size(); i++){
+        if(Acopy[i] != toBeRemoved){
+            Acopy[writeIndex++] = Acopy[i];
+        }
+    }
+    for(int i = writeIndex; i < Acopy.size(); i++){
+        Acopy[i] = 0;
+    }
+}
+
 void removeDuplicateBook(vector<int>* A){
     vector<int> &Acopy = *A;
 
